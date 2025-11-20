@@ -43,49 +43,10 @@ Tujuan utama aplikasi ini adalah:
 * Cari berdasarkan penulis
 * Cari berdasarkan tahun rilis
 
----
-
-## 🧱 Desain Database (ERD Sederhana)
-
-**Tabel: `buku`**
-
-| Field         | Tipe Data | Deskripsi                       |
-| ------------- | --------- | ------------------------------- |
-| id_buku       | INT (PK)  | ID unik buku                    |
-| judul         | VARCHAR   | Judul buku                      |
-| penulis       | VARCHAR   | Nama penulis                    |
-| tahun_rilis   | INT       | Tahun terbit                    |
-| tanggal_masuk | DATE      | Tanggal buku masuk perpustakaan |
-
-**Tabel: `peminjaman`**
-
-| Field           | Tipe Data | Deskripsi                            |
-| --------------- | --------- | ------------------------------------ |
-| id_peminjaman   | INT (PK)  | ID unik peminjaman                   |
-| id_buku         | INT (FK)  | Kode buku yang dipinjam              |
-| nama_peminjam   | VARCHAR   | Nama orang yang meminjam             |
-| tanggal_pinjam  | DATE      | Kapan buku dipinjam                  |
-| tanggal_kembali | DATE      | Kapan buku dikembalikan (boleh NULL) |
-
-**Relasi:**
-
-* Satu buku dapat dipinjam berkali-kali → *One to Many*
 
 ---
 
-## 📁 Contoh Struktur Folder
 
-```
-/aplikasi-perpustakaan
-  /src
-    /models     -> Struktur data & database
-    /views      -> Tampilan UI (jika ada)
-    /controllers -> Logika aplikasi
-  /database
-    database.db / database.sql
-  README.md
-  app.py / index.js / main.java (sesuaikan)
-```
 
 ---
 
